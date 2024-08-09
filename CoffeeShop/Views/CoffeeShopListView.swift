@@ -13,11 +13,11 @@ struct CoffeeShopListView: View {
     var body: some View {
         NavigationView {
             List {
-                ForEach(viewModel.coffeeShops) { shop in
-                    CoffeeShopRow(business: shop)
+                ForEach(viewModel.coffeeShops) { coffeeShop in
+                    CoffeeShopRow(business: coffeeShop)
                         .onAppear {
                             Task {
-                                if shop == viewModel.coffeeShops.last {
+                                if coffeeShop == viewModel.coffeeShops.last {
                                     await viewModel.fetchCoffeeShops()
                                 }
                             }
