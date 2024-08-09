@@ -7,14 +7,13 @@
 
 import Foundation
 import Alamofire
-import CoreLocation
 
 class YelpAPIClient {
     private let apiKey = "GhMnYVSy1cHNqJhgOhqPkVwzPcXzEXScOfUfrYDMEnlR4RmHLdnzdipqAt3esgmyfgiAOjJ8vdrzBfW9-ZBtia3oU6gX-jTg0eZRbBne6hjqg7ASopMdTr3otVW1ZnYx"
     private let url = "https://api.yelp.com/v3/businesses/search"
     private let resultLimit = 10
     private let searchTerm = "coffee shops"
-    private let coordinate = CLLocationCoordinate2D(latitude: 37.776575, longitude: -122.394978)
+    private let location = "410 Townsend Street, San Francisco, CA"
 
     private let decoder: JSONDecoder = {
         let decoder = JSONDecoder()
@@ -25,8 +24,7 @@ class YelpAPIClient {
     func fetchCoffeeShops(offset: Int = 0) async throws -> [YelpBusiness] {
         let parameters: [String: Any] = [
             "term": searchTerm,
-            "latitude": coordinate.latitude,
-            "longitude": coordinate.longitude,
+            "location": location,
             "limit": resultLimit,
             "offset": offset
         ]
