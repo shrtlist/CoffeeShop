@@ -26,10 +26,15 @@ struct CoffeeShopListView: View {
                 if viewModel.isLoading {
                     ProgressView()
                         .frame(maxWidth: .infinity, alignment: .center)
+                } else if viewModel.coffeeShops.isEmpty {
+                    ContentUnavailableView.init("No results", systemImage: "cup.and.saucer.fill")
                 }
             }
             .navigationTitle("Coffee Shops")
             .task {
+                await viewModel.fetchCoffeeShops()
+            }
+            .refreshable {
                 await viewModel.fetchCoffeeShops()
             }
         }
