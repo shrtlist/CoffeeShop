@@ -30,8 +30,10 @@ struct CoffeeShopRow: View {
                     .font(.subheadline)
                 Text("Price: \(business.price ?? "N/A")")
                     .font(.subheadline)
-                Text("Rating: \(business.rating)")
-                    .font(.subheadline)
+                if let formattedRating = NumberFormatter.oneDecimalPlace.string(from: NSNumber(value: business.rating)) {
+                    Text("Rating: \(formattedRating)")
+                        .font(.subheadline)
+                }
             }
         }
     }

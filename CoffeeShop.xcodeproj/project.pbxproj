@@ -20,6 +20,7 @@
 		1C69C5252C65A02200CE608B /* YelpBusiness.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C69C5242C65A02200CE608B /* YelpBusiness.swift */; };
 		1C69C5282C65A12300CE608B /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 1C69C5272C65A12300CE608B /* Alamofire */; };
 		1C69C52A2C65AA7C00CE608B /* CoffeeShopRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C69C5292C65AA7C00CE608B /* CoffeeShopRow.swift */; };
+		1C69C52D2C65B34100CE608B /* NumberFormatter+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C69C52C2C65B34100CE608B /* NumberFormatter+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		1C69C5222C65A01300CE608B /* YelpResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YelpResponse.swift; sourceTree = "<group>"; };
 		1C69C5242C65A02200CE608B /* YelpBusiness.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YelpBusiness.swift; sourceTree = "<group>"; };
 		1C69C5292C65AA7C00CE608B /* CoffeeShopRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeShopRow.swift; sourceTree = "<group>"; };
+		1C69C52C2C65B34100CE608B /* NumberFormatter+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NumberFormatter+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 		1C69C4DD2C65911800CE608B /* CoffeeShop */ = {
 			isa = PBXGroup;
 			children = (
+				1C69C52B2C65B30F00CE608B /* Extensions */,
 				1C69C5192C659D3A00CE608B /* App */,
 				1C69C51D2C659D6B00CE608B /* Views */,
 				1C69C51C2C659D6400CE608B /* ViewModel */,
@@ -182,6 +185,14 @@
 				1C69C5292C65AA7C00CE608B /* CoffeeShopRow.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		1C69C52B2C65B30F00CE608B /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				1C69C52C2C65B34100CE608B /* NumberFormatter+Extensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -326,6 +337,7 @@
 				1C69C5252C65A02200CE608B /* YelpBusiness.swift in Sources */,
 				1C69C4DF2C65911800CE608B /* CoffeeShopApp.swift in Sources */,
 				1C69C52A2C65AA7C00CE608B /* CoffeeShopRow.swift in Sources */,
+				1C69C52D2C65B34100CE608B /* NumberFormatter+Extensions.swift in Sources */,
 				1C69C51F2C659FB300CE608B /* CoffeeShopViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
