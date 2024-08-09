@@ -19,6 +19,7 @@
 		1C69C5232C65A01300CE608B /* YelpResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C69C5222C65A01300CE608B /* YelpResponse.swift */; };
 		1C69C5252C65A02200CE608B /* YelpBusiness.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C69C5242C65A02200CE608B /* YelpBusiness.swift */; };
 		1C69C5282C65A12300CE608B /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 1C69C5272C65A12300CE608B /* Alamofire */; };
+		1C69C52A2C65AA7C00CE608B /* CoffeeShopRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C69C5292C65AA7C00CE608B /* CoffeeShopRow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		1C69C5202C659FE800CE608B /* YelpAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YelpAPIClient.swift; sourceTree = "<group>"; };
 		1C69C5222C65A01300CE608B /* YelpResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YelpResponse.swift; sourceTree = "<group>"; };
 		1C69C5242C65A02200CE608B /* YelpBusiness.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YelpBusiness.swift; sourceTree = "<group>"; };
+		1C69C5292C65AA7C00CE608B /* CoffeeShopRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeShopRow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -177,6 +179,7 @@
 			isa = PBXGroup;
 			children = (
 				1C69C4E02C65911800CE608B /* CoffeeShopListView.swift */,
+				1C69C5292C65AA7C00CE608B /* CoffeeShopRow.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -322,6 +325,7 @@
 				1C69C5212C659FE800CE608B /* YelpAPIClient.swift in Sources */,
 				1C69C5252C65A02200CE608B /* YelpBusiness.swift in Sources */,
 				1C69C4DF2C65911800CE608B /* CoffeeShopApp.swift in Sources */,
+				1C69C52A2C65AA7C00CE608B /* CoffeeShopRow.swift in Sources */,
 				1C69C51F2C659FB300CE608B /* CoffeeShopViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
