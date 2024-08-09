@@ -16,8 +16,10 @@ struct CoffeeShopListView: View {
                 ForEach(viewModel.coffeeShops) { shop in
                     CoffeeShopRow(business: shop)
                         .onAppear {
-                            if shop == viewModel.coffeeShops.last {
-                                viewModel.fetchCoffeeShops()
+                            Task {
+                                if shop == viewModel.coffeeShops.last {
+                                    await viewModel.fetchCoffeeShops()
+                                }
                             }
                         }
                 }
@@ -27,8 +29,8 @@ struct CoffeeShopListView: View {
                 }
             }
             .navigationTitle("Coffee Shops")
-            .onAppear {
-                viewModel.fetchCoffeeShops()
+            .task {
+                await viewModel.fetchCoffeeShops()
             }
         }
     }
@@ -63,7 +65,6 @@ struct CoffeeShopRow: View {
         }
     }
 }
-
 
 #Preview {
     CoffeeShopListView()

@@ -11,7 +11,7 @@ import Alamofire
 class YelpAPIClient {
     private let apiKey = "GhMnYVSy1cHNqJhgOhqPkVwzPcXzEXScOfUfrYDMEnlR4RmHLdnzdipqAt3esgmyfgiAOjJ8vdrzBfW9-ZBtia3oU6gX-jTg0eZRbBne6hjqg7ASopMdTr3otVW1ZnYx"
 
-    func fetchCoffeeShops(offset: Int = 0, completion: @escaping ([YelpBusiness]) -> Void) {
+    func fetchCoffeeShops(offset: Int = 0) async throws -> [YelpBusiness] {
         let url = "https://api.yelp.com/v3/businesses/search"
         let parameters: [String: Any] = [
             "term": "coffee shops",
@@ -24,13 +24,14 @@ class YelpAPIClient {
             "Authorization": "Bearer \(apiKey)"
         ]
 
-        AF.request(url, parameters: parameters, headers: headers).responseDecodable(of: YelpResponse.self) { response in
-            switch response.result {
-            case .success(let yelpResponse):
-                completion(yelpResponse.businesses)
-            case .failure(let error):
-                print("Failed to fetch coffee shops: \(error)")
-                completion([])
+        return try await withCheckedThrowingContinuation { continuation in
+            AF.request(url, parameters: parameters, headers: headers).responseDecodable(of: YelpResponse.self) { response in
+                switch response.result {
+                case .success(let yelpResponse):
+                    continuation.resume(returning: yelpResponse.businesses)
+                case .failure(let error):
+                    continuation.resume(throwing: error)
+                }
             }
         }
     }

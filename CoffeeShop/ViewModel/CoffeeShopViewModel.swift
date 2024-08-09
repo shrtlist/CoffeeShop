@@ -6,8 +6,8 @@
 //
 
 import SwiftUI
-import Combine
 
+@MainActor
 class CoffeeShopViewModel: ObservableObject {
     @Published var coffeeShops = [YelpBusiness]()
     @Published var isLoading = false
@@ -15,16 +15,18 @@ class CoffeeShopViewModel: ObservableObject {
     private var currentPage = 0
     private let client = YelpAPIClient()
 
-    func fetchCoffeeShops() {
+    func fetchCoffeeShops() async {
         guard !isLoading else { return }
         isLoading = true
 
-        client.fetchCoffeeShops(offset: currentPage * 10) { [weak self] newShops in
-            DispatchQueue.main.async {
-                self?.coffeeShops.append(contentsOf: newShops)
-                self?.isLoading = false
-                self?.currentPage += 1
-            }
+        do {
+            let newShops = try await client.fetchCoffeeShops(offset: currentPage * 10)
+            coffeeShops.append(contentsOf: newShops)
+            currentPage += 1
+        } catch {
+            print("Failed to fetch coffee shops: \(error)")
         }
+
+        isLoading = false
     }
 }
