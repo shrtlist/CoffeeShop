@@ -15,7 +15,7 @@ struct CoffeeShopRow: View {
             AsyncImage(url: URL(string: business.imageUrl)) { image in
                 image
                     .resizable()
-                    .scaledToFit()
+                    .scaledToFill()
                     .frame(width: 80, height: 80)
                     .cornerRadius(8)
             } placeholder: {
