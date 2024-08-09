@@ -108,12 +108,12 @@
 		1C69C4DD2C65911800CE608B /* CoffeeShop */ = {
 			isa = PBXGroup;
 			children = (
-				1C69C52B2C65B30F00CE608B /* Extensions */,
 				1C69C5192C659D3A00CE608B /* App */,
 				1C69C51D2C659D6B00CE608B /* Views */,
 				1C69C51C2C659D6400CE608B /* ViewModel */,
 				1C69C51A2C659D4C00CE608B /* Model */,
 				1C69C51B2C659D5900CE608B /* Networking */,
+				1C69C52B2C65B30F00CE608B /* Extensions */,
 				1C69C4E22C65911A00CE608B /* Assets.xcassets */,
 				1C69C4E42C65911A00CE608B /* Preview Content */,
 			);
