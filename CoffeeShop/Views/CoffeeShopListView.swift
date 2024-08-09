@@ -41,7 +41,7 @@ struct CoffeeShopRow: View {
 
     var body: some View {
         HStack {
-            AsyncImage(url: URL(string: business.image_url)) { image in
+            AsyncImage(url: URL(string: business.imageUrl)) { image in
                 image
                     .resizable()
                     .scaledToFit()

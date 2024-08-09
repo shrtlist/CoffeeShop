@@ -11,9 +11,9 @@ struct YelpBusiness: Identifiable, Decodable, Equatable {
     
     let id: String
     let name: String
-    let image_url: String
+    let imageUrl: String
     let url: String
-    let review_count: Int
+    let reviewCount: Int
     let rating: Double
     let price: String?
     let location: Location
@@ -23,7 +23,7 @@ struct YelpBusiness: Identifiable, Decodable, Equatable {
         let address1: String
         let city: String
         let state: String
-        let zip_code: String
+        let zipCode: String
     }
 
     static func == (lhs: YelpBusiness, rhs: YelpBusiness) -> Bool {
