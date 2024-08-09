@@ -8,12 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		1C69C4DF2C65911800CE608B /* CoffeeShopApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C69C4DE2C65911800CE608B /* CoffeeShopApp.swift */; };
-		1C69C4E12C65911800CE608B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C69C4E02C65911800CE608B /* ContentView.swift */; };
+		1C69C4E12C65911800CE608B /* CoffeeShopListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C69C4E02C65911800CE608B /* CoffeeShopListView.swift */; };
 		1C69C4E32C65911A00CE608B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1C69C4E22C65911A00CE608B /* Assets.xcassets */; };
 		1C69C4E62C65911A00CE608B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1C69C4E52C65911A00CE608B /* Preview Assets.xcassets */; };
 		1C69C4F02C65911A00CE608B /* CoffeeShopTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C69C4EF2C65911A00CE608B /* CoffeeShopTests.swift */; };
 		1C69C4FA2C65911A00CE608B /* CoffeeShopUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C69C4F92C65911A00CE608B /* CoffeeShopUITests.swift */; };
 		1C69C4FC2C65911A00CE608B /* CoffeeShopUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C69C4FB2C65911A00CE608B /* CoffeeShopUITestsLaunchTests.swift */; };
+		1C69C51F2C659FB300CE608B /* CoffeeShopViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C69C51E2C659FB300CE608B /* CoffeeShopViewModel.swift */; };
+		1C69C5212C659FE800CE608B /* YelpAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C69C5202C659FE800CE608B /* YelpAPIClient.swift */; };
+		1C69C5232C65A01300CE608B /* YelpResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C69C5222C65A01300CE608B /* YelpResponse.swift */; };
+		1C69C5252C65A02200CE608B /* YelpBusiness.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C69C5242C65A02200CE608B /* YelpBusiness.swift */; };
+		1C69C5282C65A12300CE608B /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 1C69C5272C65A12300CE608B /* Alamofire */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +41,7 @@
 /* Begin PBXFileReference section */
 		1C69C4DB2C65911800CE608B /* CoffeeShop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoffeeShop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1C69C4DE2C65911800CE608B /* CoffeeShopApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeShopApp.swift; sourceTree = "<group>"; };
-		1C69C4E02C65911800CE608B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		1C69C4E02C65911800CE608B /* CoffeeShopListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeShopListView.swift; sourceTree = "<group>"; };
 		1C69C4E22C65911A00CE608B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1C69C4E52C65911A00CE608B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		1C69C4EB2C65911A00CE608B /* CoffeeShopTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoffeeShopTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -44,6 +49,10 @@
 		1C69C4F52C65911A00CE608B /* CoffeeShopUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoffeeShopUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1C69C4F92C65911A00CE608B /* CoffeeShopUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeShopUITests.swift; sourceTree = "<group>"; };
 		1C69C4FB2C65911A00CE608B /* CoffeeShopUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeShopUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		1C69C51E2C659FB300CE608B /* CoffeeShopViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeShopViewModel.swift; sourceTree = "<group>"; };
+		1C69C5202C659FE800CE608B /* YelpAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YelpAPIClient.swift; sourceTree = "<group>"; };
+		1C69C5222C65A01300CE608B /* YelpResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YelpResponse.swift; sourceTree = "<group>"; };
+		1C69C5242C65A02200CE608B /* YelpBusiness.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YelpBusiness.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1C69C5282C65A12300CE608B /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,8 +104,11 @@
 		1C69C4DD2C65911800CE608B /* CoffeeShop */ = {
 			isa = PBXGroup;
 			children = (
-				1C69C4DE2C65911800CE608B /* CoffeeShopApp.swift */,
-				1C69C4E02C65911800CE608B /* ContentView.swift */,
+				1C69C5192C659D3A00CE608B /* App */,
+				1C69C51D2C659D6B00CE608B /* Views */,
+				1C69C51C2C659D6400CE608B /* ViewModel */,
+				1C69C51A2C659D4C00CE608B /* Model */,
+				1C69C51B2C659D5900CE608B /* Networking */,
 				1C69C4E22C65911A00CE608B /* Assets.xcassets */,
 				1C69C4E42C65911A00CE608B /* Preview Content */,
 			);
@@ -127,6 +140,47 @@
 			path = CoffeeShopUITests;
 			sourceTree = "<group>";
 		};
+		1C69C5192C659D3A00CE608B /* App */ = {
+			isa = PBXGroup;
+			children = (
+				1C69C4DE2C65911800CE608B /* CoffeeShopApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		1C69C51A2C659D4C00CE608B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1C69C5222C65A01300CE608B /* YelpResponse.swift */,
+				1C69C5242C65A02200CE608B /* YelpBusiness.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1C69C51B2C659D5900CE608B /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				1C69C5202C659FE800CE608B /* YelpAPIClient.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		1C69C51C2C659D6400CE608B /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				1C69C51E2C659FB300CE608B /* CoffeeShopViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		1C69C51D2C659D6B00CE608B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1C69C4E02C65911800CE608B /* CoffeeShopListView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -143,6 +197,9 @@
 			dependencies = (
 			);
 			name = CoffeeShop;
+			packageProductDependencies = (
+				1C69C5272C65A12300CE608B /* Alamofire */,
+			);
 			productName = CoffeeShop;
 			productReference = 1C69C4DB2C65911800CE608B /* CoffeeShop.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +272,9 @@
 				Base,
 			);
 			mainGroup = 1C69C4D22C65911800CE608B;
+			packageReferences = (
+				1C69C5262C65A12300CE608B /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = 1C69C4DC2C65911800CE608B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -257,8 +317,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1C69C4E12C65911800CE608B /* ContentView.swift in Sources */,
+				1C69C5232C65A01300CE608B /* YelpResponse.swift in Sources */,
+				1C69C4E12C65911800CE608B /* CoffeeShopListView.swift in Sources */,
+				1C69C5212C659FE800CE608B /* YelpAPIClient.swift in Sources */,
+				1C69C5252C65A02200CE608B /* YelpBusiness.swift in Sources */,
 				1C69C4DF2C65911800CE608B /* CoffeeShopApp.swift in Sources */,
+				1C69C51F2C659FB300CE608B /* CoffeeShopViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -588,6 +652,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		1C69C5262C65A12300CE608B /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.9.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		1C69C5272C65A12300CE608B /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1C69C5262C65A12300CE608B /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 1C69C4D32C65911800CE608B /* Project object */;
 }
