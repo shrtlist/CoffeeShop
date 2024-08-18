@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  CoffeeShopListView.swift
 //  CoffeeShop
 //
 //  Created by Marco Abundo on 8/8/24.
