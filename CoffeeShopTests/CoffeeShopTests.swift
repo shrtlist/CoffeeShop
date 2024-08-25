@@ -19,7 +19,8 @@ final class CoffeeShopTests: XCTestCase {
     }
 
     @MainActor func testfetchCoffeeShops() async {
-        let sut = CoffeeShopViewModel()
+        let mockCoffeeService = MockCoffeeService()
+        let sut = CoffeeShopViewModel(coffeeService: mockCoffeeService)
 
         await sut.fetchCoffeeShops()
 

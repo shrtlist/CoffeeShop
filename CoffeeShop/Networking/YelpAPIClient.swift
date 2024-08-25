@@ -8,7 +8,7 @@
 import Foundation
 import Alamofire
 
-class YelpAPIClient {
+class YelpAPIClient: CoffeeServiceProtocol {
     private let apiKey = "GhMnYVSy1cHNqJhgOhqPkVwzPcXzEXScOfUfrYDMEnlR4RmHLdnzdipqAt3esgmyfgiAOjJ8vdrzBfW9-ZBtia3oU6gX-jTg0eZRbBne6hjqg7ASopMdTr3otVW1ZnYx"
     private let url = "https://api.yelp.com/v3/businesses/search"
     private let searchTerm = "coffee shops"

@@ -14,7 +14,11 @@ class CoffeeShopViewModel: ObservableObject {
 
     private var currentPage = 0
     private let resultLimit = 10
-    private let client = YelpAPIClient()
+    private let coffeeService: CoffeeServiceProtocol
+
+    init(coffeeService: CoffeeServiceProtocol = YelpAPIClient()) {
+        self.coffeeService = coffeeService
+    }
 
     private var offset: Int {
         currentPage * resultLimit
@@ -25,7 +29,7 @@ class CoffeeShopViewModel: ObservableObject {
         isLoading = true
 
         do {
-            let newShops = try await client.fetchCoffeeShops(offset: offset, resultLimit: resultLimit)
+            let newShops = try await coffeeService.fetchCoffeeShops(offset: offset, resultLimit: resultLimit)
             coffeeShops.append(contentsOf: newShops)
             currentPage += 1
         } catch {
