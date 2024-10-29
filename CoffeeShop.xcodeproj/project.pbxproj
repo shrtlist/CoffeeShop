@@ -19,6 +19,7 @@
 		1C69C5282C65A12300CE608B /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 1C69C5272C65A12300CE608B /* Alamofire */; };
 		1C69C52A2C65AA7C00CE608B /* CoffeeShopRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C69C5292C65AA7C00CE608B /* CoffeeShopRow.swift */; };
 		1C69C52D2C65B34100CE608B /* NumberFormatter+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C69C52C2C65B34100CE608B /* NumberFormatter+Extensions.swift */; };
+		1C808BAF2CD1795C00B6CAD3 /* LocalSearchClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C808BAE2CD1794F00B6CAD3 /* LocalSearchClient.swift */; };
 		1CA6B38D2C7B9863007A07AE /* CoffeeServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CA6B38C2C7B9863007A07AE /* CoffeeServiceProtocol.swift */; };
 		1CA6B38F2C7B98D3007A07AE /* MockCoffeeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CA6B38E2C7B98D3007A07AE /* MockCoffeeService.swift */; };
 /* End PBXBuildFile section */
@@ -47,6 +48,7 @@
 		1C69C5242C65A02200CE608B /* YelpBusiness.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YelpBusiness.swift; sourceTree = "<group>"; };
 		1C69C5292C65AA7C00CE608B /* CoffeeShopRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeShopRow.swift; sourceTree = "<group>"; };
 		1C69C52C2C65B34100CE608B /* NumberFormatter+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NumberFormatter+Extensions.swift"; sourceTree = "<group>"; };
+		1C808BAE2CD1794F00B6CAD3 /* LocalSearchClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalSearchClient.swift; sourceTree = "<group>"; };
 		1CA6B38C2C7B9863007A07AE /* CoffeeServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeServiceProtocol.swift; sourceTree = "<group>"; };
 		1CA6B38E2C7B98D3007A07AE /* MockCoffeeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockCoffeeService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -139,6 +141,7 @@
 		1C69C51B2C659D5900CE608B /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				1C808BAE2CD1794F00B6CAD3 /* LocalSearchClient.swift */,
 				1CA6B38C2C7B9863007A07AE /* CoffeeServiceProtocol.swift */,
 				1CA6B38E2C7B98D3007A07AE /* MockCoffeeService.swift */,
 				1C69C5202C659FE800CE608B /* YelpAPIClient.swift */,
@@ -220,7 +223,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1540;
-				LastUpgradeCheck = 1540;
+				LastUpgradeCheck = 1610;
 				TargetAttributes = {
 					1C69C4DA2C65911800CE608B = {
 						CreatedOnToolsVersion = 15.4;
@@ -285,6 +288,7 @@
 				1C69C4DF2C65911800CE608B /* CoffeeShopApp.swift in Sources */,
 				1C69C52A2C65AA7C00CE608B /* CoffeeShopRow.swift in Sources */,
 				1C69C52D2C65B34100CE608B /* NumberFormatter+Extensions.swift in Sources */,
+				1C808BAF2CD1795C00B6CAD3 /* LocalSearchClient.swift in Sources */,
 				1C69C51F2C659FB300CE608B /* CoffeeShopViewModel.swift in Sources */,
 				1CA6B38F2C7B98D3007A07AE /* MockCoffeeService.swift in Sources */,
 			);
@@ -361,7 +365,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -418,7 +422,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -489,13 +493,12 @@
 		1C69C5032C65911A00CE608B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 6YCWDV2B6A;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.shrtlist.CoffeeShopTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -509,13 +512,12 @@
 		1C69C5042C65911A00CE608B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 6YCWDV2B6A;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.shrtlist.CoffeeShopTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";

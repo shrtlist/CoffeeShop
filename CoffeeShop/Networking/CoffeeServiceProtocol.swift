@@ -8,5 +8,5 @@
 import Foundation
 
 protocol CoffeeServiceProtocol: AnyObject {
-    func fetchCoffeeShops(offset: Int, resultLimit: Int) async throws -> [YelpBusiness]
+    func fetchCoffeeShops(location: String, offset: Int, resultLimit: Int) async throws -> [YelpBusiness]
 }

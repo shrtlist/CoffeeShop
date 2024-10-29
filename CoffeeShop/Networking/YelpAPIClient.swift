@@ -12,7 +12,6 @@ class YelpAPIClient: CoffeeServiceProtocol {
     private let apiKey = "GhMnYVSy1cHNqJhgOhqPkVwzPcXzEXScOfUfrYDMEnlR4RmHLdnzdipqAt3esgmyfgiAOjJ8vdrzBfW9-ZBtia3oU6gX-jTg0eZRbBne6hjqg7ASopMdTr3otVW1ZnYx"
     private let url = "https://api.yelp.com/v3/businesses/search"
     private let searchTerm = "coffee shops"
-    private let location = "410 Townsend Street, San Francisco, CA"
 
     private let decoder: JSONDecoder = {
         let decoder = JSONDecoder()
@@ -20,7 +19,7 @@ class YelpAPIClient: CoffeeServiceProtocol {
         return decoder
     }()
 
-    func fetchCoffeeShops(offset: Int = 0, resultLimit: Int) async throws -> [YelpBusiness] {
+    func fetchCoffeeShops(location: String, offset: Int = 0, resultLimit: Int) async throws -> [YelpBusiness] {
         let parameters: [String: Any] = [
             "term": searchTerm,
             "location": location,

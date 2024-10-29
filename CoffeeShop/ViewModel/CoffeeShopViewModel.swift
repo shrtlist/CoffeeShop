@@ -15,8 +15,9 @@ class CoffeeShopViewModel: ObservableObject {
     private var currentPage = 0
     private let resultLimit = 10
     private let coffeeService: CoffeeServiceProtocol
+    private let location = "410 Townsend Street, San Francisco, CA"
 
-    init(coffeeService: CoffeeServiceProtocol = YelpAPIClient()) {
+    init(coffeeService: CoffeeServiceProtocol = LocalSearchClient()) {
         self.coffeeService = coffeeService
     }
 
@@ -29,7 +30,7 @@ class CoffeeShopViewModel: ObservableObject {
         isLoading = true
 
         do {
-            let newShops = try await coffeeService.fetchCoffeeShops(offset: offset, resultLimit: resultLimit)
+            let newShops = try await coffeeService.fetchCoffeeShops(location: location, offset: offset, resultLimit: resultLimit)
             coffeeShops.append(contentsOf: newShops)
             currentPage += 1
         } catch {

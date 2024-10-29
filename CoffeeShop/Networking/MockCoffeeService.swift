@@ -8,8 +8,8 @@
 import Foundation
 
 final class MockCoffeeService: CoffeeServiceProtocol {
-    func fetchCoffeeShops(offset: Int, resultLimit: Int) async throws -> [YelpBusiness] {
-        let location = YelpBusiness.Location(address1: "asdf", city: "San Francisco", state: "CA", zipCode: "94102")
+    func fetchCoffeeShops(location: String, offset: Int, resultLimit: Int) async throws -> [YelpBusiness] {
+        let location = YelpBusiness.Location(address1: "150 2nd St", city: "San Francisco", state: "CA", zipCode: "94103")
         return [YelpBusiness(id: "00001",
                              name: "Blue Bottle",
                              imageUrl: "",
