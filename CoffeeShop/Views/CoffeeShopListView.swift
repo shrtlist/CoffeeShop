@@ -12,22 +12,26 @@ struct CoffeeShopListView: View {
 
     var body: some View {
         NavigationStack {
-            List(viewModel.coffeeShops) { coffeeShop in
-                CoffeeShopRow(business: coffeeShop)
-                    .task {
-                        if coffeeShop == viewModel.coffeeShops.last {
-                            await viewModel.fetchCoffeeShops()
-                        }
+            Group {
+                if viewModel.isLoading {
+                    ProgressView()
+                        .frame(maxWidth: .infinity, alignment: .center)
+                } else if viewModel.coffeeShops.isEmpty {
+                    ScrollView {
+                        ContentUnavailableView.init("No results", systemImage: "cup.and.saucer.fill")
                     }
+                } else {
+                    List(viewModel.coffeeShops) { coffeeShop in
+                        CoffeeShopRow(business: coffeeShop)
+                            .task {
+                                if coffeeShop == viewModel.coffeeShops.last {
+                                    await viewModel.fetchCoffeeShops()
+                                }
+                            }
+                    }
+                }
             }
             .navigationTitle("Coffee Shops")
-
-            if viewModel.isLoading {
-                ProgressView()
-                    .frame(maxWidth: .infinity, alignment: .center)
-            } else if viewModel.coffeeShops.isEmpty {
-                ContentUnavailableView.init("No results", systemImage: "cup.and.saucer.fill")
-            }
         }
         .task {
             await viewModel.fetchCoffeeShops()
