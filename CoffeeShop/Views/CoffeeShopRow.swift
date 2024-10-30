@@ -9,21 +9,23 @@ import SwiftUI
 
 struct CoffeeShopRow: View {
     let business: YelpBusiness
-    private let frameSize = 80.0
+    private let frameSize = 50.0
     private let cornerRadius = 8.0
 
     var body: some View {
-        HStack {
+        HStack(spacing: 20.0) {
             if let url = URL(string: business.imageUrl) {
                 AsyncImage(url: url) { phase in
                     switch phase {
-                    case .failure:
-                        Image(systemName: "cup.and.saucer.fill") // Indicates an error, show default image
+                    case .failure: // Indicates an error, show default image
+                        Image(systemName: "cup.and.saucer.fill")
+                            .resizable()
                             .scaledToFit()
                             .frame(width: frameSize, height: frameSize)
                             .cornerRadius(cornerRadius)
-                    case .success(let image):
-                        image.resizable() // Displays the loaded image.
+                    case .success(let image): // Displays the loaded image.
+                        image
+                            .resizable()
                             .scaledToFit()
                             .frame(width: frameSize, height: frameSize)
                             .cornerRadius(cornerRadius)
