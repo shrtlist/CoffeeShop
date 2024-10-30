@@ -20,6 +20,7 @@
 		1C69C52A2C65AA7C00CE608B /* CoffeeShopRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C69C5292C65AA7C00CE608B /* CoffeeShopRow.swift */; };
 		1C69C52D2C65B34100CE608B /* NumberFormatter+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C69C52C2C65B34100CE608B /* NumberFormatter+Extensions.swift */; };
 		1C808BAF2CD1795C00B6CAD3 /* LocalSearchClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C808BAE2CD1794F00B6CAD3 /* LocalSearchClient.swift */; };
+		1C808BE12CD1BF8800B6CAD3 /* MKMapItem+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C808BE02CD1BF7C00B6CAD3 /* MKMapItem+Extensions.swift */; };
 		1CA6B38D2C7B9863007A07AE /* CoffeeServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CA6B38C2C7B9863007A07AE /* CoffeeServiceProtocol.swift */; };
 		1CA6B38F2C7B98D3007A07AE /* MockCoffeeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CA6B38E2C7B98D3007A07AE /* MockCoffeeService.swift */; };
 /* End PBXBuildFile section */
@@ -49,6 +50,7 @@
 		1C69C5292C65AA7C00CE608B /* CoffeeShopRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeShopRow.swift; sourceTree = "<group>"; };
 		1C69C52C2C65B34100CE608B /* NumberFormatter+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NumberFormatter+Extensions.swift"; sourceTree = "<group>"; };
 		1C808BAE2CD1794F00B6CAD3 /* LocalSearchClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalSearchClient.swift; sourceTree = "<group>"; };
+		1C808BE02CD1BF7C00B6CAD3 /* MKMapItem+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MKMapItem+Extensions.swift"; sourceTree = "<group>"; };
 		1CA6B38C2C7B9863007A07AE /* CoffeeServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeServiceProtocol.swift; sourceTree = "<group>"; };
 		1CA6B38E2C7B98D3007A07AE /* MockCoffeeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockCoffeeService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -169,6 +171,7 @@
 		1C69C52B2C65B30F00CE608B /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				1C808BE02CD1BF7C00B6CAD3 /* MKMapItem+Extensions.swift */,
 				1C69C52C2C65B34100CE608B /* NumberFormatter+Extensions.swift */,
 			);
 			path = Extensions;
@@ -289,6 +292,7 @@
 				1C69C52A2C65AA7C00CE608B /* CoffeeShopRow.swift in Sources */,
 				1C69C52D2C65B34100CE608B /* NumberFormatter+Extensions.swift in Sources */,
 				1C808BAF2CD1795C00B6CAD3 /* LocalSearchClient.swift in Sources */,
+				1C808BE12CD1BF8800B6CAD3 /* MKMapItem+Extensions.swift in Sources */,
 				1C69C51F2C659FB300CE608B /* CoffeeShopViewModel.swift in Sources */,
 				1CA6B38F2C7B98D3007A07AE /* MockCoffeeService.swift in Sources */,
 			);
