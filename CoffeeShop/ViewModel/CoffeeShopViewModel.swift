@@ -32,6 +32,7 @@ class CoffeeShopViewModel: ObservableObject {
         do {
             let newShops = try await coffeeService.fetchCoffeeShops(location: location, offset: offset, resultLimit: resultLimit)
             coffeeShops.append(contentsOf: newShops)
+            coffeeShops = NSOrderedSet(array: coffeeShops).array as! [YelpBusiness]
             currentPage += 1
         } catch {
             print("Failed to fetch coffee shops: \(error)")
