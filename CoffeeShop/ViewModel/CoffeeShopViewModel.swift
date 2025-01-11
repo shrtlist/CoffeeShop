@@ -8,9 +8,9 @@
 import SwiftUI
 
 @MainActor
-class CoffeeShopViewModel: ObservableObject {
-    @Published var coffeeShops = [YelpBusiness]()
-    @Published var isLoading = false
+@Observable class CoffeeShopViewModel {
+    var coffeeShops = [YelpBusiness]()
+    var isLoading = false
 
     private var currentPage = 0
     private let resultLimit = 10

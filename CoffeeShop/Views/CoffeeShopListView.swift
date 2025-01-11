@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct CoffeeShopListView: View {
-    @StateObject private var viewModel = CoffeeShopViewModel()
+    @State private var viewModel = CoffeeShopViewModel()
 
     var body: some View {
         NavigationStack {
