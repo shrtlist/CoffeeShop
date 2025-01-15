@@ -9,7 +9,7 @@ import SwiftUI
 
 struct CoffeeShopRow: View {
     let business: YelpBusiness
-    private let frameSize = 50.0
+    private let frameSize = 40.0
     private let cornerRadius = 8.0
 
     var body: some View {
@@ -18,23 +18,19 @@ struct CoffeeShopRow: View {
                 AsyncImage(url: url) { phase in
                     switch phase {
                     case .failure: // Indicates an error, show default image
-                        Image(systemName: "cup.and.saucer.fill")
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: frameSize, height: frameSize)
-                            .cornerRadius(cornerRadius)
+                        PlaceholderImageView(size: frameSize)
                     case .success(let image): // Displays the loaded image.
                         image
-                            .resizable()
                             .scaledToFit()
-                            .frame(width: frameSize, height: frameSize)
                             .cornerRadius(cornerRadius)
                     default:
-                        // Acts as a placeholder.
                         ProgressView()
-                            .frame(width: frameSize, height: frameSize)
+                            .scaleEffect(2.0, anchor: .center)
                     }
                 }
+                .frame(width: frameSize, height: frameSize)
+            } else {
+                PlaceholderImageView(size: frameSize)
             }
 
             VStack(alignment: .leading) {
@@ -51,4 +47,10 @@ struct CoffeeShopRow: View {
             }
         }
     }
+}
+
+#Preview("CoffeeShopRow") {
+    let location = YelpBusiness.Location(address1: "123 Main St", city: "Anytown", state: "CA", zipCode: "90210")
+    let business = YelpBusiness(id: "0", name: "CoffeeShop", imageUrl: "https://picsum.photos/50/50", url: "https://www.google.com", reviewCount: 12, rating: 4.8, price: "$$$", location: location, phone: "415-555-1212")
+    CoffeeShopRow(business: business)
 }
