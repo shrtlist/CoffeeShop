@@ -6,10 +6,11 @@
 //
 
 import SwiftUI
+import MapKit
 
 @MainActor
 @Observable class CoffeeShopViewModel {
-    var coffeeShops = [YelpBusiness]()
+    var coffeeShops = [MKMapItem]()
     var isLoading = false
 
     private var currentPage = 0
@@ -32,7 +33,7 @@ import SwiftUI
         do {
             let newShops = try await coffeeService.fetchCoffeeShops(location: location, offset: offset, resultLimit: resultLimit)
             coffeeShops.append(contentsOf: newShops)
-            coffeeShops = NSOrderedSet(array: coffeeShops).array as! [YelpBusiness]
+            coffeeShops = NSOrderedSet(array: coffeeShops).array as! [MKMapItem]
             currentPage += 1
         } catch {
             print("Failed to fetch coffee shops: \(error)")

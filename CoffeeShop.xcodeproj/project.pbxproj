@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		1C6934C32D373EE4001D42D9 /* PlaceholderImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C6934C22D373EDE001D42D9 /* PlaceholderImageView.swift */; };
+		1C6935EA2D4ADD7E001D42D9 /* CNPostalAddress+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C6935E92D4ADD7C001D42D9 /* CNPostalAddress+Extension.swift */; };
+		1C6935EC2D4B0369001D42D9 /* MapItemDetailViewControllerRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C6935EB2D4B0367001D42D9 /* MapItemDetailViewControllerRepresentable.swift */; };
 		1C69C4DF2C65911800CE608B /* CoffeeShopApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C69C4DE2C65911800CE608B /* CoffeeShopApp.swift */; };
 		1C69C4E12C65911800CE608B /* CoffeeShopListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C69C4E02C65911800CE608B /* CoffeeShopListView.swift */; };
 		1C69C4E32C65911A00CE608B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1C69C4E22C65911A00CE608B /* Assets.xcassets */; };
@@ -38,6 +40,8 @@
 
 /* Begin PBXFileReference section */
 		1C6934C22D373EDE001D42D9 /* PlaceholderImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceholderImageView.swift; sourceTree = "<group>"; };
+		1C6935E92D4ADD7C001D42D9 /* CNPostalAddress+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CNPostalAddress+Extension.swift"; sourceTree = "<group>"; };
+		1C6935EB2D4B0367001D42D9 /* MapItemDetailViewControllerRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapItemDetailViewControllerRepresentable.swift; sourceTree = "<group>"; };
 		1C69C4DB2C65911800CE608B /* CoffeeShop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoffeeShop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1C69C4DE2C65911800CE608B /* CoffeeShopApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeShopApp.swift; sourceTree = "<group>"; };
 		1C69C4E02C65911800CE608B /* CoffeeShopListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoffeeShopListView.swift; sourceTree = "<group>"; };
@@ -166,6 +170,7 @@
 			children = (
 				1C69C4E02C65911800CE608B /* CoffeeShopListView.swift */,
 				1C69C5292C65AA7C00CE608B /* CoffeeShopRow.swift */,
+				1C6935EB2D4B0367001D42D9 /* MapItemDetailViewControllerRepresentable.swift */,
 				1C6934C22D373EDE001D42D9 /* PlaceholderImageView.swift */,
 			);
 			path = Views;
@@ -174,6 +179,7 @@
 		1C69C52B2C65B30F00CE608B /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				1C6935E92D4ADD7C001D42D9 /* CNPostalAddress+Extension.swift */,
 				1C808BE02CD1BF7C00B6CAD3 /* MKMapItem+Extensions.swift */,
 				1C69C52C2C65B34100CE608B /* NumberFormatter+Extensions.swift */,
 			);
@@ -288,6 +294,7 @@
 			files = (
 				1C69C5232C65A01300CE608B /* YelpResponse.swift in Sources */,
 				1C69C4E12C65911800CE608B /* CoffeeShopListView.swift in Sources */,
+				1C6935EC2D4B0369001D42D9 /* MapItemDetailViewControllerRepresentable.swift in Sources */,
 				1CA6B38D2C7B9863007A07AE /* CoffeeServiceProtocol.swift in Sources */,
 				1C69C5212C659FE800CE608B /* YelpAPIClient.swift in Sources */,
 				1C69C5252C65A02200CE608B /* YelpBusiness.swift in Sources */,
@@ -297,6 +304,7 @@
 				1C808BAF2CD1795C00B6CAD3 /* LocalSearchClient.swift in Sources */,
 				1C808BE12CD1BF8800B6CAD3 /* MKMapItem+Extensions.swift in Sources */,
 				1C6934C32D373EE4001D42D9 /* PlaceholderImageView.swift in Sources */,
+				1C6935EA2D4ADD7E001D42D9 /* CNPostalAddress+Extension.swift in Sources */,
 				1C69C51F2C659FB300CE608B /* CoffeeShopViewModel.swift in Sources */,
 				1CA6B38F2C7B98D3007A07AE /* MockCoffeeService.swift in Sources */,
 			);

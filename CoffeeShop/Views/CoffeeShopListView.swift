@@ -6,9 +6,12 @@
 //
 
 import SwiftUI
+import MapKit
 
 struct CoffeeShopListView: View {
     @State private var viewModel = CoffeeShopViewModel()
+    @State private var selectedCoffeeShop: MKMapItem?
+    @State private var showingDetail = false
 
     var body: some View {
         NavigationStack {
@@ -22,12 +25,17 @@ struct CoffeeShopListView: View {
                     }
                 } else {
                     List(viewModel.coffeeShops) { coffeeShop in
-                        CoffeeShopRow(business: coffeeShop)
-                            .task {
-                                if coffeeShop == viewModel.coffeeShops.last {
-                                    await viewModel.fetchCoffeeShops()
+                        Button(action: {
+                            selectedCoffeeShop = coffeeShop
+                            showingDetail = true
+                        }) {
+                            CoffeeShopRow(coffeeShop: coffeeShop)
+                                .task {
+                                    if coffeeShop == viewModel.coffeeShops.last {
+                                        await viewModel.fetchCoffeeShops()
+                                    }
                                 }
-                            }
+                        }
                     }
                 }
             }
@@ -38,6 +46,11 @@ struct CoffeeShopListView: View {
         }
         .refreshable {
             await viewModel.fetchCoffeeShops()
+        }
+        .sheet(isPresented: $showingDetail) {
+            if let selectedShop = selectedCoffeeShop {
+                MapItemDetailViewControllerRepresentable(mapItem: selectedShop)
+            }
         }
     }
 }
